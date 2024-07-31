@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
+from datetime import datetime, timezone
 from werkzeug.security import generate_password_hash, check_password_hash
 
 db = SQLAlchemy()
@@ -32,6 +32,6 @@ class Compliment(db.Model):
     recipient_id = db.Column(db.Integer, db.ForeignKey(
         'recipient.id'), nullable=False)
     compliment_text = db.Column(db.String(500), nullable=False)
-    sent_at = db.Column(db.DateTime, default=datetime.utcnow)
+    sent_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
     recipient = db.relationship(
         'Recipient', backref=db.backref('compliments', lazy=True))

@@ -83,4 +83,4 @@ $RECYCLE.BIN/
 .swp
 *~
 *.temp
-*.orig
+*.env" 
