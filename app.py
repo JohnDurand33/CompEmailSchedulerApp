@@ -27,7 +27,7 @@ def create_app():
     @app.route('/send-test-email')
     def send_test_email():
         try:
-            attachment_path = os.path.join(app.root_path, r"C:\Users\johnd\dev-apps\WorkDayCompliments.fullstack\gh_repo_Miro_thumbnail_img.png")
+            attachment_path = os.path.join(app.root_path, r"C: \Users\johnd\dev-apps\WorkDayCompliments.fullstack\WorkdayCompliments.back\WorkFlowToDate-whole.png")
             send_email('OMG I LOVE YOU BABE', 'john.durand1@gmail.com',
                        "Today I built some of the application logic.  I'm mapping it out so doing the front and back end at the same time.  Learning sooooo much.  If I could attach it here it would be awesome-   John", attachment_path=attachment_path)
             return jsonify({"msg": "Email sent successfully"}), 200
