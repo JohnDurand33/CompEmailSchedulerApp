@@ -1,0 +1,61 @@
+Week 1
+
+- Application Title - "Be Kind."
+
+MY INSPIRATION - 
+
+My wife has fully supported me throughout my journey, and without her I couldn't have made the leap.  Her "chronic positivity" is inspiring, and so, as I continue to learn and grow, I thought creating an app that let's her know how much I care during my walk in the cloud would be cool.  Nothing fancy.  
+
+The beginning was just sending her an email that said how awesome she was while she works.  She is an underwriter and is in front of her screen all day every day, so I figured getting some love while you're in the weeds would be nice.
+
+CONCEPT OVERVIEW -
+
+Users are able to sign up, log in and out.  
+
+Once logged in, users are able to setup the sending of a variety of email and / or send texts, for a variety of occasions (or even just because), to their family and friends.  Users will be able select the times each contact is able to receive the communications, as well as the frequency.  They will also be able to sign their contact list up for Special Occasion Events (a.k.a. CHRISTMAS, etc..), where they can attach an image if they like, use a Boilerplate email or customize their own.
+
+Users will have access to a Calendar that displays all communications and events.
+
+Thinking about integrating a video conferencing API, but I still need to research it!
+
+APPLICATION BUILD TO DATE
+
+So much AWS, I've only built a skeleton database with the models.py, config.py, routes.py, utils.py app.py using Flask so far.  I'm sure it will grow as I continue to develop the application.  It's connected it to a Supabase instance.  Love the Supabase!  So easy.
+
+Working on the User Experience (UX) Workflows and some component flows as well, which is ironic, because I'm also working on mastering the use of "orchestration engines", which basically automates not just the creation of a lot of workflows, but allows you to instantly implement them into your business or personal website / application.  Super cool.
+
+What I'm building is just a lovely and extremely tedious reminder why they exist lol.  
+I"VE ATTACHED A PDF OF WHERE I'M AT IN THE ROOT DIRECTORY OF MY GH REPOSITORY.  I'll update it as I go.
+
+- SETUP AWS ACCOUNT - Not hard at all.  Access to the free tier is nice, and a great marketing strategy.  Just let people build using your service for no / low cost for an entire year until they NEED it.... then, BANG!  LOL..  Seriously a nice service.  I now see how so many Saas businesses may have been inspired..
+
+- LEARNED ABOUT: 
+    Amazon Relational Database System (RDS) - will integrate with my Postgres Database nicely. Really saw the power of what AWS Cloud Infrastructure can do.
+
+    Amazon Identity Access Management (IAM) - I understand authentication code, so this one has been a bit frustrating.  I so understand how important security is, so it's going to level me up in the end I'm sure.
+
+    Amazon Elastic Compute Cloud (EC2) - Unreal. Scalable isn't just a buzzword team.  it's up to you.  I mean from simple web hosting to complex machine learning models, it can hold just about anything.  I'm just going to host my wee application in there for now. 
+
+- "APPLY WHAT YOU LEARNED!"
+
+IAM Inital Security Setup - To protect my account from being hacked
+    Created Admin User
+    Created Worker for everyday tasks to protect root user and admin worker access.
+
+Route 53 / Amzon SES - To ensure functionality of my application's primary function - send emails
+    Created a domain and a "sender" email with Route 53's Domain Name System (DNS) service and configured it for use with AWS's Amazon Simple Email Service (SES).  Done and done.  If you like Records, check this out.
+
+EC2 - I'm not where I want to be here, yet.  My t2.micro instance is created.  I'm waiting to get approved for migration  
+    to a production build where I'll be able to send to unverified email addresses.  Once I'm approved, I'll migrate my Flask application into there and operate inside the cloud instead of locally.  
+
+Pretty insane stuff tbh.  All just to my wife she's the best.  Let's gooo!
+
+Till next week-
+
+#BESTDECISIONEVER
+#DONTSTOPCANTSTOPWONTSTOP
+#LETSGOOO!
+#100DAYSOFCODE
+#AWSCLOUD
+#SOFTWAREENGINEER
+#SOFTWAREDEVELOPER
