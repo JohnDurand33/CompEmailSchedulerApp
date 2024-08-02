@@ -12,7 +12,7 @@ CONCEPT OVERVIEW -
 
 Users are able to sign up, log in and out.  
 
-Once logged in, users are able to setup the sending of a variety of email and / or send texts, for a variety of occasions (or even just because), to their family and friends.  Users will be able select the times each contact is able to receive the communications, as well as the frequency.  They will also be able to sign their contact list up for Special Occasion Events (a.k.a. CHRISTMAS, etc..), where they can attach an image if they like, use a Boilerplate email or customize their own.
+Once logged in, users are able to setup the sending of a variety of messages via text / email, for a variety of occasions (or even just because), to their family and friends.  Users will be able select the times each contact is able to receive the communications, as well as the frequency.  They will also be able to sign their contact list up for special Occasion Events (a.k.a. CHRISTMAS, etc..), where they can attach an image if they like, use a Boilerplate email or customize their own.
 
 Users will have access to a Calendar that displays all communications and events.
 
@@ -48,14 +48,4 @@ Route 53 / Amzon SES - To ensure functionality of my application's primary funct
 EC2 - I'm not where I want to be here, yet.  My t2.micro instance is created.  I'm waiting to get approved for migration  
     to a production build where I'll be able to send to unverified email addresses.  Once I'm approved, I'll migrate my Flask application into there and operate inside the cloud instead of locally.  
 
-Pretty insane stuff tbh.  All just to my wife she's the best.  Let's gooo!
-
-Till next week-
-
-#BESTDECISIONEVER
-#DONTSTOPCANTSTOPWONTSTOP
-#LETSGOOO!
-#100DAYSOFCODE
-#AWSCLOUD
-#SOFTWAREENGINEER
-#SOFTWAREDEVELOPER
+Pretty insane stuff tbh.  All just to my wife she's the best.  Let's go!
