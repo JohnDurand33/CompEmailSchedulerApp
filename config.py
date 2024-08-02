@@ -6,7 +6,7 @@ load_dotenv()
 class Config:
     # Flask Configuration
     FLASK_APP = os.environ.get('FLASK_APP')
-    FLASK_ENV = os.environ.get('FLASK_ENV')
+    FLASK_DEBUG = os.environ.get('FLASK_DEBUG')
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
     # SQLAlchemy / Supabase Configuration
