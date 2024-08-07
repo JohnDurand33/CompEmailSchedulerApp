@@ -1,17 +1,16 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, create_access_token, get_jwt_identity
-import boto3
+from utils import send_email, validate_email
 from models import db, User, Recipient, Event, Message
 
 bp = Blueprint('bp', __name__)
-
-# SES Configuration
-ses_client = boto3.client('ses', region_name='us-west-1')
 
 
 @bp.route('/register', methods=['POST'])
 def register():
     data = request.json
+    if not validate_email(data['email']):
+        return jsonify({'message': 'Invalid email format'}), 400
     user = User.query.filter_by(email=data['email']).first()
     if user:
         return jsonify({'message': 'User already exists'}), 400
@@ -35,16 +34,12 @@ def login():
 
 @bp.route('/send-email', methods=['POST'])
 @jwt_required()
-def send_email():
+def send_email_route():
     data = request.json
-    response = ses_client.send_email(
-        Source=data['from'],
-        Destination={'ToAddresses': [data['to']]},
-        Message={
-            'Subject': {'Data': data['subject']},
-            'Body': {'Text': {'Data': data['body']}}
-        }
-    )
+    if not validate_email(data['to']):
+        return jsonify({'message': 'Invalid email format'}), 400
+    response = send_email(data['from'], data['to'],
+                          data['subject'], data['body'])
     return jsonify(response)
 
 
