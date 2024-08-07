@@ -14,6 +14,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = os.environ.get('SQLALCHEMY_TRACK_MODIFICATIONS')
 
     # AWS SES Configuration
+    AWS_REGION = os.environ.get('AWS_REGION')
     MAIL_SERVER = os.environ.get('MAIL_SERVER')
     MAIL_PORT = int(os.environ.get('MAIL_PORT') or 587)
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') == 'True'
@@ -21,4 +22,19 @@ class Config:
     MAIL_PASSWORD = os.environ.get('SES_SMTP_PASSWORD')
     MAIL_DEFAULT_SENDER = os.environ.get('MAIL_DEFAULT_SENDER')
 
+
+load_dotenv()
+
+
+class Config:
+
+
+    SES_SMTP_USERNAME = os.environ.get('SES_SMTP_USERNAME')
+    SES_SMTP_PASSWORD = os.environ.get('SES_SMTP_PASSWORD')
+    MAIL_SERVER = os.environ.get('MAIL_SERVER')
+    MAIL_PORT = int(os.environ.get('MAIL_PORT', 587))
+    MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS', 'True').lower() in [
+        'true', '1', 't']
+    MAIL_DEFAULT_SENDER = os.environ.get('MAIL_DEFAULT_SENDER')
+    JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
 
