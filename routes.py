@@ -3,10 +3,11 @@ from flask_jwt_extended import jwt_required, create_access_token, get_jwt_identi
 from utils import send_email, validate_email
 from models import db, User, Recipient, Event, Message
 
-bp = Blueprint('bp', __name__)
+auth = Blueprint('auth', __name__)
+api = Blueprint('api', __name__)
 
 
-@bp.route('/register', methods=['POST'])
+@auth.route('/register', methods=['POST'])
 def register():
     data = request.json
     if not validate_email(data['email']):
@@ -21,7 +22,7 @@ def register():
     return jsonify({'message': 'User registered successfully'}), 201
 
 
-@bp.route('/login', methods=['POST'])
+@auth.route('/login', methods=['POST'])
 def login():
     data = request.json
     user = User.query.filter_by(email=data['email']).first()
@@ -32,7 +33,7 @@ def login():
     return jsonify({'message': 'Invalid credentials'}), 401
 
 
-@bp.route('/send-email', methods=['POST'])
+@api.route('/send-email', methods=['POST'])
 @jwt_required()
 def send_email_route():
     data = request.json
@@ -43,7 +44,7 @@ def send_email_route():
     return jsonify(response)
 
 
-@bp.route('/recipients', methods=['POST'])
+@api.route('/recipients', methods=['POST'])
 @jwt_required()
 def create_recipient():
     user_id = get_jwt_identity()['id']
@@ -51,17 +52,17 @@ def create_recipient():
     new_recipient = Recipient(
         user_id=user_id,
         name=data['name'],
-        relationship=data['relationship'],
+        relationship=data.get('relationship', ''),
         email=data['email'],
-        address=data['address'],
-        avatar=data['avatar']
+        address=data.get('address', ''),
+        avatar=data.get('avatar', '')
     )
     db.session.add(new_recipient)
     db.session.commit()
     return jsonify({'message': 'Recipient created successfully'})
 
 
-@bp.route('/recipients', methods=['GET'])
+@api.route('/recipients', methods=['GET'])
 @jwt_required()
 def get_recipients():
     user_id = get_jwt_identity()['id']
@@ -69,7 +70,7 @@ def get_recipients():
     return jsonify([recipient.as_dict() for recipient in recipients])
 
 
-@bp.route('/recipients/<int:id>', methods=['PUT'])
+@api.route('/recipients/<int:id>', methods=['PUT'])
 @jwt_required()
 def update_recipient(id):
     data = request.json
