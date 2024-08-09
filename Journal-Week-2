@@ -1,0 +1,37 @@
+Learning The Cloud and How to Develop Inside It - Week 2 ☁ 
+
+💡 REVIEW 💡 
+
+I'm working on learning the AWS Cloud while building a simple full-stack application inspired my wife, Diane, who is absolutely, the GOAT!
+
+🚧 FAMILY VISIT 🚧
+
+I had my family from out of town stay with us last week, so I didn't get to do as much as I would have liked from a dev perspective. But, being able to spend time with the fam is a huge upside to life right now, and I would NEVER trade it. Time is precious. Make the most of the time you have!
+
+❗ Co.Lab32 ❗
+
+I’m Happy to announce that for the next 8 weeks I will be working with a team from all around the world to “Design something Cool.” Being accepted into the Co.Lab program is an honor and an opportunity continue to learn and grow! Updating my resume as we speak….
+ 
+ Not sure how that will impact this project I’m currently working on, but I’m dedicated to getting this across the finish line. So...
+
+👨‍🔬 APPLICATION BUILD TO DATE 👨‍🔬 
+
+💠 Between yesterday and today, I've managed to put a skeleton React.js front-end together. I've only put together the basic user interface without frills. Still much more to integrate and test! 💠
+
+💠Currently working on getting my Flask back-end server properly configured through Amazon's SES application with my AWS Route 53 domain name and tying it to the React front-end. 💠
+
+💺 BENCHMARKS 💺
+
+💠 Postgres DB working well with my server side. Able to test CRUD operations with success there💠 
+
+💠 Basic auto-email functionality - I\'ve got SES working with my server, just need to work on triggering the right actions from the UI side 💠
+
+💠 Have my app\'s user stories completed. User stories are basically all of the experiences that your user can take part in while using your application. It helps you break your problem into smaller, logical pieces 💠 
+
+#2 is HUGE. Always get your core functionality working before worrying about the rest!
+
+📓 Never Stop Learning 📓
+ 
+I\'ve ordered the React Key Concepts 600 pager by Maximilian Schwarzmüller that I\'m going to try to consume ASAP ()I\'m hungry..!) It\'s a great application with so many meta-frameworks that have sprouted from it. I need to really master it. His updated version comes out in October, but I need input!
+
+Keep getting better at whatever your passion is everyone. Luck favors the well-prepared!
