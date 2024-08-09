@@ -33,6 +33,16 @@ def login():
     return jsonify({'message': 'Invalid credentials'}), 401
 
 
+@api.route('/test-email', methods=['POST'])
+def test_email_route():
+    data = request.json
+    to_email = data.get('to', 'defaultrecipient@example.com')
+    subject = data.get('subject', 'Test Email')
+    body = data.get('body', 'This is a test email.')
+
+    response = send_email(to_email, subject, body)
+    return jsonify(response)
+
 @api.route('/send-email', methods=['POST'])
 @jwt_required()
 def send_email_route():
