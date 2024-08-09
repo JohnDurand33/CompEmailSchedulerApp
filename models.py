@@ -11,6 +11,7 @@ class User(db.Model):
     recipients = db.relationship('Recipient', backref='user', lazy=True)
     events = db.relationship('Event', backref='user', lazy=True)
     messages = db.relationship('Message', backref='user', lazy=True)
+    schedules = db.relationship('RecipientSchedule', backref='user', lazy=True)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -27,6 +28,8 @@ class Recipient(db.Model):
     email = db.Column(db.String(120), nullable=False)
     address = db.Column(db.String(200))
     avatar = db.Column(db.String(200))
+    schedules = db.relationship(
+        'RecipientSchedule', backref='recipient', lazy=True)
 
     def as_dict(self):
         return {

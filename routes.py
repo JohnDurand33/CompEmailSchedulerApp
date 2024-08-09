@@ -39,8 +39,8 @@ def send_email_route():
     data = request.json
     if not validate_email(data['to']):
         return jsonify({'message': 'Invalid email format'}), 400
-    response = send_email(data['from'], data['to'],
-                          data['subject'], data['body'])
+    response = send_email(data['to'],
+                          data['subject'], data['body'], data['from'])
     return jsonify(response)
 
 
