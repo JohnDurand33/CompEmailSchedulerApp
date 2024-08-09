@@ -11,10 +11,10 @@ I had my family from out of town stay with us last week, so I did not get to do 
 ❗ Co.Lab32 ❗
 
 I’m Happy to announce that for the next 8 weeks I will be working with a team from all around the world to “Design something Cool.” Being accepted into the Co.Lab program is an honor and an opportunity continue to learn and grow! Updating my resume as we speak….
- 
- Not sure how that will impact this project I’m currently working on, but I’m dedicated to getting this across the finish line. So...
 
-👨‍🔬 APPLICATION BUILD TO DATE 👨‍🔬 
+Not sure how that will impact this project I’m currently working on, but I’m dedicated to getting this across the finish line. So...
+
+👨‍🔬 APPLICATION BUILD TO DATE 👨‍🔬
 
 💠 Between yesterday and today, I haveve managed to put a skeleton React.js front-end together. I have only put together the basic user interface without frills. Still much more to integrate and test! 💠
 
